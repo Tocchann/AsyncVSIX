@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" ?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="CommentMenus.4595e892-97d9-4157-ad33-afa8633dfecc" Version="16.0.1029.0" Language="ja-JP" Publisher="高萩 俊行" />
+        <Identity Id="CommentMenus.4595e892-97d9-4157-ad33-afa8633dfecc" Version="2.0.1030.0" Language="ja-JP" Publisher="高萩 俊行" />
         <DisplayName>コメントメニューの追加</DisplayName>
         <Description xml:space="preserve">行コメントメニュー追加</Description>
         <License>License.txt</License>
