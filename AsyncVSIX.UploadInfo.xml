@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UploadInfo xmlns="UploadInfo.xsd">
+	<Target TargetID="UpList_AsyncVSIX" Folder="c:\Work\AsyncVSIX\テスト"/>
+	<!--自動生成フォルダ-->
+	<Exclude File="IncGen\"/>
+	<!--プロジェクトフォルダに取り込んでくるファイルはアップ対象にしない-->
+	<Exclude File="RootFiles\" />
+	<Exclude File="CREO\" />
+	<Exclude File="Modules\" />
+	<Exclude File="bin\" />
+	<Exclude File="RefProjects\" />
+</UploadInfo>

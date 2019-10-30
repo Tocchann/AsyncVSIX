@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<!--This is the file that defines the IDs for all the commands exposed by VisualStudio. -->
+	<Extern href="stdidcmd.h"/>
+	<!--This header contains the command ids for the menus provided by the shell. -->
+	<Extern href="vsshlids.h"/>
+
+	<!--The Commands section is where commands, menus, and menu groups are defined.
+			This section uses a Guid to identify the package that provides the command defined inside it. -->
+	<Commands package="guidCommentMenusPackage">
+		<Groups>
+			<!--編集メニュー-->
+			<Group guid="guidCommentMenusPackageCmdSet" id="MenuGroupEdit" priority="0x0600">
+				<Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_EDIT" />
+			</Group>
+			<!--コードウィンドウ-->
+			<Group guid="guidCommentMenusPackageCmdSet" id="MenuGroupCodewindow" priority="0x0600">
+				<Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN"/>
+			</Group>
+		</Groups>
+
+		<!--Buttons section. -->
+		<Buttons>
+			<!--コードウィンドウへの追加-->
+			<Button guid="guidCommentMenusPackageCmdSet" id="cmdidInsAdj" priority="0x0100" type="Button">
+				<Parent guid="guidCommentMenusPackageCmdSet" id="MenuGroupCodewindow" />
+				<Strings>
+					<ButtonText>Adj コメントの挿入(&amp;A)</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidCommentMenusPackageCmdSet" id="cmdidInsFix" priority="0x0101" type="Button">
+				<Parent guid="guidCommentMenusPackageCmdSet" id="MenuGroupCodewindow" />
+				<Strings>
+					<ButtonText>Fix コメントの挿入(&amp;F)</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidCommentMenusPackageCmdSet" id="cmdidInsDate" priority="0x0102" type="Button">
+				<Parent guid="guidCommentMenusPackageCmdSet" id="MenuGroupCodewindow" />
+				<Strings>
+					<ButtonText>日付の挿入(&amp;D)</ButtonText>
+				</Strings>
+			</Button>
+			<!--エディットメニューへの追加-->
+			<Button guid="guidCommentMenusPackageCmdSet" id="cmdidInsAdj" priority="0x0100" type="Button">
+				<Parent guid="guidCommentMenusPackageCmdSet" id="MenuGroupEdit" />
+				<Strings>
+					<ButtonText>Adj コメントの挿入(&amp;A)</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidCommentMenusPackageCmdSet" id="cmdidInsFix" priority="0x0101" type="Button">
+				<Parent guid="guidCommentMenusPackageCmdSet" id="MenuGroupEdit" />
+				<Strings>
+					<ButtonText>Fix コメントの挿入(&amp;F)</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidCommentMenusPackageCmdSet" id="cmdidInsDate" priority="0x0102" type="Button">
+				<Parent guid="guidCommentMenusPackageCmdSet" id="MenuGroupEdit" />
+				<Strings>
+					<ButtonText>日付の挿入(&amp;D)</ButtonText>
+				</Strings>
+			</Button>
+		</Buttons>
+	</Commands>
+
+	<Symbols>
+		<!-- This is the package guid. -->
+		<GuidSymbol name="guidCommentMenusPackage" value="{6475190a-1ac5-4461-9438-e29355d0bc90}" />
+
+		<!-- This is the guid used to group the menu commands together -->
+		<GuidSymbol name="guidCommentMenusPackageCmdSet" value="{54f2dde3-c5d4-4168-a390-22147f5ef411}">
+			<IDSymbol name="MenuGroupCodewindow" value="0x0100" />
+			<IDSymbol name="MenuGroupEdit" value="0x0101" />
+			<IDSymbol name="cmdidInsAdj" value="0x0200"/>
+			<IDSymbol name="cmdidInsFix" value="0x0201"/>
+			<IDSymbol name="cmdidInsDate" value="0x0202"/>
+		</GuidSymbol>
+	</Symbols>
+</CommandTable>
