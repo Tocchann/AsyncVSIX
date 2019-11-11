@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" ?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="UploadSln.7d8a18bd-ad9a-4cc4-9a4b-a9d20123afc4" Version="2.0.1030.0" Language="ja-JP" Publisher="高萩 俊行" />
+        <Identity Id="UploadSln.7d8a18bd-ad9a-4cc4-9a4b-a9d20123afc4" Version="2.0.1111.0" Language="ja-JP" Publisher="高萩 俊行" />
         <DisplayName>Solution Files Uploader</DisplayName>
         <Description xml:space="preserve">Solution Files Uploader</Description>
         <License>License.txt</License>
