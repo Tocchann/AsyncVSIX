@@ -56,16 +56,7 @@ namespace CommentMenus
 			RegistryKey keyOsInfo = rootKey.OpenSubKey( @"SOFTWARE\Microsoft\Windows NT\CurrentVersion", false );
 			string userName = keyOsInfo.GetValue( "RegisteredOwner" ) as string;
 
-			var pos = (string.IsNullOrWhiteSpace( userName )) ? -1 : userName.IndexOfAny( new char[] { ' ', '　' } );
-			if( pos == -1 )
-			{
-				userName = Environment.UserName;
-			}
-			else
-			{
-				userName = userName.Substring( 0, pos );
-			}
-			OwnerName = userName;
+			OwnerName = string.IsNullOrWhiteSpace( userName ) ? Environment.UserName : userName;
 
 			commandService.AddCommand( new MenuCommand( this.ExecuteInsAdj, new CommandID( CommandSet, cmdidInsAdj ) ) );
 			commandService.AddCommand( new MenuCommand( this.ExecuteInsFix, new CommandID( CommandSet, cmdidInsFix ) ) );
