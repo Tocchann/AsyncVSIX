@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle( "CommentMenus" )]
 [assembly: AssemblyDescription( "" )]
 [assembly: AssemblyConfiguration( "" )]
-[assembly: AssemblyCompany( "" )]
+[assembly: AssemblyCompany( "Morrin Corporation" )]
 [assembly: AssemblyProduct( "CommentMenus" )]
-[assembly: AssemblyCopyright( "" )]
+[assembly: AssemblyCopyright( "Copyright (c) Morrin Corporation. All right reserved." )]
 [assembly: AssemblyTrademark( "" )]
 [assembly: AssemblyCulture( "" )]
 
@@ -29,5 +29,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion( "2.1.1125.0" )]
-[assembly: AssemblyFileVersion( "2.1.1125.0" )]
+[assembly: AssemblyVersion( "2.2.0.0" )]
+[assembly: AssemblyFileVersion( "2.2.2023.518" )]

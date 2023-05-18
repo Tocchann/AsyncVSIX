@@ -40,6 +40,12 @@
 					<ButtonText>日付の挿入(&amp;D)</ButtonText>
 				</Strings>
 			</Button>
+			<Button guid="guidCommentMenusPackageCmdSet" id="cmdidInsGuid" priority="0x0103" type="Button">
+				<Parent guid="guidCommentMenusPackageCmdSet" id="MenuGroupCodewindow" />
+				<Strings>
+					<ButtonText>GUIDの挿入(&amp;G)</ButtonText>
+				</Strings>
+			</Button>
 			<!--エディットメニューへの追加-->
 			<Button guid="guidCommentMenusPackageCmdSet" id="cmdidInsAdj" priority="0x0100" type="Button">
 				<Parent guid="guidCommentMenusPackageCmdSet" id="MenuGroupEdit" />
@@ -59,6 +65,12 @@
 					<ButtonText>日付の挿入(&amp;D)</ButtonText>
 				</Strings>
 			</Button>
+			<Button guid="guidCommentMenusPackageCmdSet" id="cmdidInsGuid" priority="0x0103" type="Button">
+				<Parent guid="guidCommentMenusPackageCmdSet" id="MenuGroupEdit" />
+				<Strings>
+					<ButtonText>GUIDの挿入(&amp;G)</ButtonText>
+				</Strings>
+			</Button>
 		</Buttons>
 	</Commands>
 
@@ -73,6 +85,7 @@
 			<IDSymbol name="cmdidInsAdj" value="0x0200"/>
 			<IDSymbol name="cmdidInsFix" value="0x0201"/>
 			<IDSymbol name="cmdidInsDate" value="0x0202"/>
+			<IDSymbol name="cmdidInsGuid" value="0x0203"/>
 		</GuidSymbol>
 	</Symbols>
 </CommandTable>
