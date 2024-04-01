@@ -161,6 +161,7 @@ namespace CommentMenus
 		}
 		private void InsertGuid( Guid guid, string undoName )
 		{
+			ThreadHelper.ThrowIfNotOnUIThread();
 			// 取り込み形式を設定できるといいのかな？でも固定で括弧なしでよい
 			InsertText( undoName, guid.ToString() ); // 括弧の有無はどっちでもよい(最終的にはついてるほうに寄せていいと思うけど)
 		}
