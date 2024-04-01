@@ -23,6 +23,7 @@ namespace CommentMenus
 		public const int cmdidInsAdj = 0x0200;
 		public const int cmdidInsFix = 0x0201;
 		public const int cmdidInsDate = 0x0202;
+		public const int cmdidInsGuid = 0x0203;
 		/// <summary>
 		/// Command menu group (command set GUID).
 		/// </summary>
@@ -70,6 +71,7 @@ namespace CommentMenus
 			commandService.AddCommand( new MenuCommand( this.ExecuteInsAdj, new CommandID( CommandSet, cmdidInsAdj ) ) );
 			commandService.AddCommand( new MenuCommand( this.ExecuteInsFix, new CommandID( CommandSet, cmdidInsFix ) ) );
 			commandService.AddCommand( new MenuCommand( this.ExecuteInsDate, new CommandID( CommandSet, cmdidInsDate ) ) );
+			commandService.AddCommand( new MenuCommand( this.ExecuteInsGuid, new CommandID( CommandSet, cmdidInsGuid ) ) );
 		}
 		/// <summary>
 		/// Gets the instance of the command.
@@ -129,6 +131,12 @@ namespace CommentMenus
 			ThreadHelper.ThrowIfNotOnUIThread();
 			InsertComment( "", "日付の挿入" );
 		}
+		private void ExecuteInsGuid( object sender, EventArgs e )
+		{
+			ThreadHelper.ThrowIfNotOnUIThread();
+			InsertGuid( Guid.NewGuid(), "Guidの挿入" );
+			// GUIDの挿入はコメント挿入とは異なる
+		}
 		private void InsertComment( string prefix, string undoName )
 		{
 			ThreadHelper.ThrowIfNotOnUIThread();
@@ -151,6 +159,12 @@ namespace CommentMenus
 
 			InsertText( undoName, lineText );
 		}
+		private void InsertGuid( Guid guid, string undoName )
+		{
+			// 取り込み形式を設定できるといいのかな？でも固定で括弧なしでよい
+			InsertText( undoName, guid.ToString() ); // 括弧の有無はどっちでもよい(最終的にはついてるほうに寄せていいと思うけど)
+		}
+
 		private void InsertText( string undoName, string insText )
 		{
 			ThreadHelper.ThrowIfNotOnUIThread();
